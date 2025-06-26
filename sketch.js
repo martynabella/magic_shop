@@ -141,7 +141,7 @@ function draw() {
   textSize(28);
 let tekst = "Gratulacje! Wygrałeś nagrodę specjalną!" +
     " Do Twojego koszyka zostało dodane członkostwo VIP w naszym sklepie internetowym!" + 
- "/n Jego koszt to jedynie 999zł co miesiąc!";
+ " Jego koszt to jedynie 999zł co miesiąc!";
 
 text(tekst, boxX + 20, boxY + 20, boxWidth - 40, boxHeight - 40);
   return;
@@ -422,14 +422,14 @@ function rysujEkranStartowy() {
 
   fill(0);
   textSize(32);
-  text("Wybierz swoją postać", width / 2, 250);
+  text("Wybierz swoją postać", width / 2, 190);
 
-  image(postac1Img, width / 2 - 150, height/2, 100, 100);
-  image(postac2Img, width / 2 + 50, height/2, 100, 100);
+  image(postac1Img, width / 2 - 150, 250, 100, 150);
+  image(postac2Img, width / 2 + 50, 250, 100, 150);
 
   textSize(20);
-  text("Naciśnij 1", width / 2 - 100, 450);
-  text("Naciśnij 2", width / 2 + 100, 450);
+  text("Naciśnij 1", width / 2 - 100, 430);
+  text("Naciśnij 2", width / 2 + 100, 430);
 }
 
 function PrzykrytaMoneta(moneta) {
@@ -491,7 +491,6 @@ function keyPressed() {
       wybranoMonete = false;
       komunikat = "";
       koszyk = [];
-
       produkty = [
         { x: 500, y: 235, size: 40, name: 'cola' },
         { x: 360, y: 220, size: 40, name: 'cola2' },
@@ -499,6 +498,14 @@ function keyPressed() {
         { x: 620, y: 260, size: 40, name: 'donut' },
         { x: 70, y: 240, size: 40, name: 'monster' },
       ];
+      zebraneMonety = 0;
+      liczbaProbMonety = 0;
+      monety = [];
+      ukryteMonety = [
+    { x: 80, y: 250, size: 40, collected: false, visible: true },
+    { x: 510, y: 250, size: 40, collected: false, visible: true },
+    { x: 0, y: 0, size: 40, collected: false, visible: false, active: false, cannotBeCaught: true }
+  ];
       czas = 20;
       licznikStart = false;
       return;
