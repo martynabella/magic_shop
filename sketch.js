@@ -424,8 +424,8 @@ function rysujEkranStartowy() {
   textSize(32);
   text("Wybierz swoją postać", width / 2, 190);
 
-  image(postac1Img, width / 2 - 150, 250, 100, 150);
-  image(postac2Img, width / 2 + 50, 250, 100, 150);
+  image(postac1Img, width / 2 - 150, 250, 100, 130);
+  image(postac2Img, width / 2 + 50, 250, 100, 130);
 
   textSize(20);
   text("Naciśnij 1", width / 2 - 100, 430);
